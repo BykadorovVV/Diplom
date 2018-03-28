@@ -67,7 +67,7 @@ int main()
 	while (true)
 	{
 		std::string command;
-		dip.receiveAction(command);
+		robot.receiveAction(command);
 	}
 }
 
