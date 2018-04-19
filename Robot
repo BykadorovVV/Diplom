@@ -32,8 +32,13 @@ public class Robot
 		action.type = vect[0];
 		action.value = vect[1];
 
-	   try 
-	   {
+	 //  try 
+	   //{	
+	   
+	     if(type.substr(0, 1)=="#")
+              {
+	      
+	      
 		if (action.type == "#Speed") 
 		{
 			if (action.value > 0) 
@@ -60,13 +65,31 @@ public class Robot
 			}
 		}
 		
-	   }
-	
-	   catch()
-	   {
-	cout<< "Ошибка протокола";
-	   }	
+	     }	
+	     
+	     
+	     else
+	     {
+	       cout<< "Ошибка протокола!";
+	       cout<< "Введите команду";
+	       
+	     }
+		
+		
+		
+	  // }
+          //  catch()
+	   //{
+	//cout<< "Ошибка протокола";
+	  //  }	
+	  
+	  
+	  
 	}
+	
+	
+	
+	
 }
 
 int main() 
