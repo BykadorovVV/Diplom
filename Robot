@@ -25,15 +25,16 @@ public class Robot
 
 	public Action receiveAction(string inputString)
 	{
-		std::vector<std::string> vect(2);
+		std::vector<std::string> vect(3);
 		vect = split(inputString, "=");
 
 		Action action;
 		action.type = vect[0];
 		action.value = vect[1];
 
-		
-		if (action.type == "Speed") 
+	   try 
+	   {
+		if (action.type == "#Speed") 
 		{
 			if (action.value > 0) 
 			{
@@ -46,7 +47,7 @@ public class Robot
 			}
 		}
 
-		else if (action.type == "Angle")
+		else if (action.type == "#Angle")
 		{
 			if (action.value > -90 and def.value < 90) 
 			{
@@ -58,6 +59,13 @@ public class Robot
 				turnLeft(action.value);
 			}
 		}
+		
+	   }
+	
+	   catch()
+	   {
+	cout<< "Ошибка протокола";
+	   }	
 	}
 }
 
