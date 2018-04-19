@@ -25,7 +25,7 @@ public class Robot
 
 	public Action receiveAction(string inputString)
 	{
-		std::vector<std::string> vect(3);
+		std::vector<std::string> vect(2);
 		vect = split(inputString, "=");
 
 		Action action;
